@@ -10,7 +10,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 app = FastAPI()
 
-conn = sqlite3.connect('memoria_clientes.db')
+conn = sqlite3.connect('memoria_clientes.db'check_same_thread=False)
 cursor = conn.cursor()
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS historial (
